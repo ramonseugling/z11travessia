@@ -140,10 +140,10 @@ section { padding: 100px 0; }
 .exp-details { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 20px; padding: 24px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 24px; }
 .exp-detail-label { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 4px; }
 .exp-detail-val { font-size: .95rem; font-weight: 400; color: var(--text); }
-.exp-incluso { margin-bottom: 28px; }
-.exp-incluso-label { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
-.exp-incluso-items { font-size: .88rem; color: var(--text-dim); line-height: 1.8; }
-.exp-incluso-items span { margin: 0 6px; color: var(--text-faint); }
+.exp-included { margin-bottom: 28px; }
+.exp-included-label { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 8px; }
+.exp-included-items { font-size: .88rem; color: var(--text-dim); line-height: 1.8; }
+.exp-included-items span { margin: 0 6px; color: var(--text-faint); }
 
 /* ── Experience editorial ── */
 .exp-editorial { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }

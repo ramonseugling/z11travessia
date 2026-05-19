@@ -1,14 +1,14 @@
 # Z11 Travessia — Landing Page
 
-Site institucional da Z11 Travessia (expedições de barco no sul de Florianópolis).
+Institutional landing page for Z11 Travessia (boat expeditions in southern Florianópolis, Brazil).
 
 ## Stack
 
-- [Astro](https://astro.build) (output estático)
+- [Astro](https://astro.build) (static output)
 - Deploy: [Vercel](https://vercel.com)
-- Fontes: Cormorant Garamond + DM Sans (Google Fonts)
+- Fonts: Cormorant Garamond + DM Sans (Google Fonts)
 
-## Desenvolvimento
+## Development
 
 ```bash
 npm install
@@ -17,22 +17,23 @@ npm run build
 npm run preview
 ```
 
-## Conteúdo
+## Assets
 
-A página foi gerada a partir de um bundle HTML auto-extraível (`Z11 Travessia - Landing Page.html`, fora do repo). Os assets foram decodificados via `npm run extract` para `public/assets/`. Para regerar:
+The page assets (images) were decoded from a bundled HTML file via `npm run extract`. To regenerate:
 
 ```bash
+# Place the original bundle at the project root, then:
 npm run extract
 ```
 
-## Configuração pós-aprovação
+## Placeholder content
 
-Pontos com placeholder, a substituir quando os proprietários confirmarem:
+Items to replace once the owners (Kaio & Gabriel) confirm:
 
-- Número de WhatsApp (`5548900000000`) — buscar e substituir.
-- Handle do Instagram (`@z11travessia` / `instagram.com/z11travessia`).
-- Embed do vídeo institucional em `src/components/Video.astro`.
+- WhatsApp number (`5548900000000`) — search and replace in `src/` and `src/data/expeditions.ts`
+- Instagram handle (`@z11travessia` / `instagram.com/z11travessia`) — confirm if correct
+- Video embed in `src/components/Video.astro`
 
 ## Deploy
 
-Push para `main` → Vercel detecta Astro automaticamente.
+Push to `main` → Vercel auto-detects Astro and deploys.

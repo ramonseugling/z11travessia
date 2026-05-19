@@ -33,24 +33,24 @@ import { expeditions, WHATSAPP_BASE } from '../data/expeditions';
               </div>
             )}
 
-            {exp.incluso.length > 0 && (
-              <div class="exp-incluso">
-                <div class="exp-incluso-label">Incluso</div>
-                <div class="exp-incluso-items">
-                  {exp.incluso.map((item, i) => (
+            {exp.included.length > 0 && (
+              <div class="exp-included">
+                <div class="exp-included-label">Incluso</div>
+                <div class="exp-included-items">
+                  {exp.included.map((item, i) => (
                     <>
                       {item}
-                      {i < exp.incluso.length - 1 && <span>·</span>}
+                      {i < exp.included.length - 1 && <span>·</span>}
                     </>
                   ))}
                 </div>
               </div>
             )}
 
-            {exp.incusoExtras && (
-              <div class="exp-incluso" style="border-top:1px solid var(--border);padding-top:24px">
-                <div class="exp-incluso-label">Experiências já realizadas</div>
-                <div class="exp-incluso-items" style="line-height:2">{exp.incusoExtras}</div>
+            {exp.includedExtras && (
+              <div class="exp-included" style="border-top:1px solid var(--border);padding-top:24px">
+                <div class="exp-included-label">Experiências já realizadas</div>
+                <div class="exp-included-items" style="line-height:2">{exp.includedExtras}</div>
               </div>
             )}
 

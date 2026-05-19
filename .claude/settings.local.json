@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/extract-bundle.mjs)",
+      "Bash(npm install *)"
+    ]
+  }
+}

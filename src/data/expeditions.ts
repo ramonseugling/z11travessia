@@ -6,10 +6,10 @@ export interface Expedition {
   image: string;
   imageAlt: string;
   details?: { label: string; value: string; highlight?: boolean }[];
-  incluso: string[];
+  included: string[];
   whatsappMsg: string;
   ctaLabel: string;
-  incusoExtras?: string;
+  includedExtras?: string;
 }
 
 export const WHATSAPP_BASE = 'https://wa.me/5548900000000';
@@ -28,7 +28,7 @@ export const expeditions: Expedition[] = [
       { label: 'Desembarque', value: '12:30' },
       { label: 'Valor', value: 'R$ 300 / pessoa', highlight: true },
     ],
-    incluso: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
+    included: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
     whatsappMsg: 'Olá! Gostaria de consultar datas para Moleques do Sul.',
     ctaLabel: 'Consultar próximas datas',
   },
@@ -45,7 +45,7 @@ export const expeditions: Expedition[] = [
       { label: 'Retorno', value: '15:00' },
       { label: 'Valor', value: 'R$ 280 / pessoa', highlight: true },
     ],
-    incluso: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
+    included: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
     whatsappMsg: 'Olá! Gostaria de consultar datas para Mares do Sul.',
     ctaLabel: 'Consultar próximas datas',
   },
@@ -56,8 +56,8 @@ export const expeditions: Expedition[] = [
     description: 'O Travessia está disponível para eventos privados, confraternizações, jantares a bordo, expedições gastronômicas com chefs e experiências corporativas. Roteiro e experiência personalizados.',
     image: '/assets/a8a2b4b5-78fa-4d31-b8a8-c4ec2233e79f.jpg',
     imageAlt: 'Grupo pulando do barco Travessia',
-    incluso: [],
-    incusoExtras: 'Expedição gastronômica com mergulho para coleta de frutos do mar e harmonização com vinhos de adega submarina · Passeios de surf em grupo · Celebrações e datas especiais',
+    included: [],
+    includedExtras: 'Expedição gastronômica com mergulho para coleta de frutos do mar e harmonização com vinhos de adega submarina · Passeios de surf em grupo · Celebrações e datas especiais',
     whatsappMsg: 'Olá! Gostaria de planejar uma expedição privada.',
     ctaLabel: 'Planejar minha expedição',
   },
