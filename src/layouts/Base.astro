@@ -1,0 +1,78 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Z11 Travessia — Mar e Gastronomia',
+  description = 'Expedições de barco no sul de Florianópolis. Mar, gastronomia e natureza preservada. Do Pântano do Sul às Ilhas Moleques do Sul.',
+  ogImage = '/assets/dfbcffca-89b4-4e89-86c5-d9e563a9594d.jpg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalURL}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImageURL}>
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Z11 Travessia">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImageURL}>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Z11 Travessia",
+      "description": "Expedições de barco no sul de Florianópolis — Mar, gastronomia e natureza preservada.",
+      "url": "https://z11travessia.vercel.app",
+      "image": "https://z11travessia.vercel.app/assets/dfbcffca-89b4-4e89-86c5-d9e563a9594d.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Florianópolis",
+        "addressRegion": "SC",
+        "addressCountry": "BR",
+        "streetAddress": "Pântano do Sul"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.786,
+        "longitude": -48.506
+      },
+      "sameAs": ["https://instagram.com/z11travessia"]
+    }
+  </script>
+</head>
+<body>
+  <slot />
+</body>
+</html>

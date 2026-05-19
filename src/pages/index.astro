@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Expeditions from '../components/Expeditions.astro';
+import Gallery from '../components/Gallery.astro';
+import Experience from '../components/Experience.astro';
+import Video from '../components/Video.astro';
+import Porto from '../components/Porto.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base>
+  <Nav />
+  <Hero />
+  <About />
+  <Expeditions />
+  <Gallery />
+  <Experience />
+  <Video />
+  <Porto />
+  <CTAFinal />
+  <Footer />
+</Base>
+
+<script>
+/* ── Intersection Observer (fade-in) ── */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+requestAnimationFrame(() => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) { el.classList.add('revealed'); io.unobserve(el); }
+  });
+});
+
+/* ── Nav scroll state ── */
+const nav = document.getElementById('nav')!;
+const onScroll = () => { nav.classList.toggle('scrolled', window.scrollY > 60); };
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ── Mobile menu ── */
+const toggle = document.getElementById('navToggle')!;
+const links = document.getElementById('navLinks')!;
+toggle.addEventListener('click', () => {
+  links.classList.toggle('active');
+  toggle.classList.toggle('active');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  links.classList.remove('active');
+  toggle.classList.remove('active');
+}));
+
+/* ── Hero parallax ── */
+const hero = document.querySelector('.hero') as HTMLElement;
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const s = window.scrollY;
+      if (s < window.innerHeight) {
+        const content = hero.querySelector('.hero-content') as HTMLElement;
+        content.style.transform = `translateY(${s * 0.12}px)`;
+        content.style.opacity = String(Math.max(0, 1 - s / (window.innerHeight * 0.7)));
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+</script>

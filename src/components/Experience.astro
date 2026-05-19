@@ -1,0 +1,42 @@
+---
+const stories = [
+  {
+    img: '/assets/a8dc3309-706c-47d1-a542-dd52fbbd172b.jpg',
+    alt: 'Costão rochoso do sul da ilha',
+    caption: 'A costa inexplorada',
+    quote: 'O turismo no sul da ilha vai muito além da Ilha do Campeche. Lagoinha do Leste, Costões do Pântano do Sul, Três Irmãs, Naufragados — uma costa ainda pouco explorada.',
+  },
+  {
+    img: '/assets/8b9e077c-ec08-4cce-a9e3-3e8f47cdc581.jpg',
+    alt: 'Gastronomia preparada a bordo',
+    caption: 'Muito além do passeio',
+    quote: 'O diferencial não é só o passeio. É o serviço, a história e as pessoas. Conhecer Floripa sem conhecer sua cultura é conhecer apenas a superfície.',
+  },
+  {
+    img: '/assets/4e4b3108-0c76-487f-a1c4-0c1d208801b6.jpg',
+    alt: 'Âncora com Moleques do Sul ao fundo',
+    caption: 'O porto',
+    quote: 'O Pântano do Sul é o porto do Travessia. Uma região rica em cultura da pesca, natureza preservada e costa protegida dos ventos do norte.',
+  },
+];
+---
+<section id="experience">
+  <div class="container container--narrow" style="margin-bottom:48px">
+    <div class="sect-label reveal">A Experiência</div>
+    <h2 class="reveal reveal-d1" style="font-family:var(--serif);font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;margin:16px 0 8px">Do nascer ao pôr do sol</h2>
+    <p class="reveal reveal-d2" style="font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.8vw,1.25rem);color:var(--text-dim);margin-bottom:12px">Uma experiência para todos — famílias, surfistas, turistas e manezinhos</p>
+  </div>
+  <div class="exp-editorial">
+    {stories.map((s) => (
+      <div class="exp-story reveal">
+        <div class="exp-story-img">
+          <img src={s.img} alt={s.alt} loading="lazy">
+        </div>
+        <div class="exp-story-text">
+          <span class="story-caption">{s.caption}</span>
+          <blockquote>{s.quote}</blockquote>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

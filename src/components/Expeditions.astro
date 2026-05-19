@@ -1,0 +1,70 @@
+---
+import { expeditions, WHATSAPP_BASE } from '../data/expeditions';
+---
+<section id="expeditions">
+  <div class="container">
+    <div class="exp-intro reveal">
+      <div class="sect-label" style="justify-content:center">Expedições</div>
+      <h2>Cada rota, uma história<br>diferente do sul da ilha</h2>
+    </div>
+
+    <div class="exp-cards">
+      {expeditions.map((exp) => (
+        <article class="exp-card reveal">
+          <div class="exp-img">
+            <img src={exp.image} alt={exp.imageAlt} loading="lazy">
+          </div>
+          <div class="exp-body">
+            <div class="exp-tag">{exp.tag}</div>
+            <h3>{exp.title}</h3>
+            <p class="route-sub">{exp.subtitle}</p>
+            <p class="route-desc">{exp.description}</p>
+
+            {exp.details && exp.details.length > 0 && (
+              <div class="exp-details">
+                {exp.details.map((d) => (
+                  <div>
+                    <div class="exp-detail-label">{d.label}</div>
+                    <div class="exp-detail-val" style={d.highlight ? 'color:var(--gold-lt)' : ''}>
+                      {d.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {exp.incluso.length > 0 && (
+              <div class="exp-incluso">
+                <div class="exp-incluso-label">Incluso</div>
+                <div class="exp-incluso-items">
+                  {exp.incluso.map((item, i) => (
+                    <>
+                      {item}
+                      {i < exp.incluso.length - 1 && <span>·</span>}
+                    </>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {exp.incusoExtras && (
+              <div class="exp-incluso" style="border-top:1px solid var(--border);padding-top:24px">
+                <div class="exp-incluso-label">Experiências já realizadas</div>
+                <div class="exp-incluso-items" style="line-height:2">{exp.incusoExtras}</div>
+              </div>
+            )}
+
+            <a
+              href={`${WHATSAPP_BASE}?text=${encodeURIComponent(exp.whatsappMsg)}`}
+              class="btn btn--gold btn--sm"
+              target="_blank"
+              rel="noopener"
+            >
+              {exp.ctaLabel}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
