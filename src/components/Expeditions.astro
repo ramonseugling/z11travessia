@@ -47,10 +47,17 @@ import { expeditions, WHATSAPP_BASE } from '../data/expeditions';
               </div>
             )}
 
-            {exp.includedExtras && (
+            {exp.includedExtras && exp.includedExtras.length > 0 && (
               <div class="exp-included" style="border-top:1px solid var(--border);padding-top:24px">
                 <div class="exp-included-label">Experiências já realizadas</div>
-                <div class="exp-included-items" style="line-height:2">{exp.includedExtras}</div>
+                <div class="exp-included-items">
+                  {exp.includedExtras.map((item, i) => (
+                    <>
+                      {item}
+                      {i < exp.includedExtras!.length - 1 && <span>·</span>}
+                    </>
+                  ))}
+                </div>
               </div>
             )}
 

@@ -9,7 +9,7 @@ export interface Expedition {
   included: string[];
   whatsappMsg: string;
   ctaLabel: string;
-  includedExtras?: string;
+  includedExtras?: string[];
 }
 
 export const WHATSAPP_BASE = 'https://wa.me/5548900000000';
@@ -57,7 +57,12 @@ export const expeditions: Expedition[] = [
     image: '/assets/a8a2b4b5-78fa-4d31-b8a8-c4ec2233e79f.jpg',
     imageAlt: 'Grupo pulando do barco Travessia',
     included: [],
-    includedExtras: 'Expedição gastronômica com mergulho para coleta de frutos do mar e harmonização com vinhos de adega submarina · Passeios de surf em grupo · Celebrações e datas especiais',
+    includedExtras: [
+      'Gastronomia a bordo com chefs convidados',
+      'Roteiros culturais pelo sul da ilha',
+      'Saídas de surf em grupo',
+      'Celebrações e eventos privados',
+    ],
     whatsappMsg: 'Olá! Gostaria de planejar uma expedição privada.',
     ctaLabel: 'Planejar minha expedição',
   },
