@@ -34,7 +34,7 @@ export const expeditions: Expedition[] = [
   },
   {
     tag: 'Expedição 02',
-    title: 'Mares do Sul — Ilhas Três Irmãs + Naufragados',
+    title: 'Mares do Sul: Ilhas Três Irmãs + Naufragados',
     subtitle: 'Cultura açoriana e mar tranquilo',
     description: 'Uma navegação tranquila e cheia de histórias. Cultura açoriana, paisagens preservadas e gastronomia local servida a bordo.',
     image: '/assets/d63b8453-5e05-4986-a58a-ffe2eb2c59be.jpg',

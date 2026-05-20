@@ -160,6 +160,11 @@ section { padding: 100px 0; }
 .porto-text p { font-size: .95rem; color: var(--text-dim); line-height: 1.9; margin-bottom: 16px; max-width: 560px; }
 .porto-map { border: 1px solid var(--border); border-radius: 2px; padding: 32px; display: flex; align-items: center; justify-content: center; background: var(--bg-card); min-height: 280px; }
 
+/* ── Gastronomy ── */
+.gastro-media { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gastro-media img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; aspect-ratio: 1/1; }
+.gastro-media__main { grid-column: 1 / -1; aspect-ratio: 16/10; }
+
 /* ── CTA Final ── */
 .cta-final { text-align: center; padding: 120px 0; position: relative; overflow: hidden; }
 .cta-final::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 100% 60% at 50% 80%,rgba(50,120,190,.12) 0%,transparent 100%); }

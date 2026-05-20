@@ -6,7 +6,7 @@ interface Props {
 }
 
 const {
-  title = 'Z11 Travessia — Mar e Gastronomia',
+  title = 'Z11 Travessia | Mar e Gastronomia',
   description = 'Expedições de barco no sul de Florianópolis. Mar, gastronomia e natureza preservada. Do Pântano do Sul às Ilhas Moleques do Sul.',
   ogImage = '/assets/dfbcffca-89b4-4e89-86c5-d9e563a9594d.jpg',
 } = Astro.props;
@@ -40,7 +40,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
   <meta name="twitter:image" content={ogImageURL}>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/jpeg" href="/assets/30884882-8fe0-4a60-869a-f59e8167580b.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +53,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Z11 Travessia",
-      "description": "Expedições de barco no sul de Florianópolis — Mar, gastronomia e natureza preservada.",
+      "description": "Expedições de barco no sul de Florianópolis. Mar, gastronomia e natureza preservada.",
       "url": "https://z11travessia.vercel.app",
       "image": "https://z11travessia.vercel.app/assets/dfbcffca-89b4-4e89-86c5-d9e563a9594d.jpg",
       "address": {
