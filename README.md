@@ -30,9 +30,8 @@ npm run extract
 
 Items to replace once the owners (Kaio & Gabriel) confirm:
 
-- WhatsApp number (`5548900000000`) — search and replace in `src/` and `src/data/expeditions.ts`
-- Instagram handle (`@z11travessia` / `instagram.com/z11travessia`) — confirm if correct
 - Video embed in `src/components/Video.astro`
+- Production URL in `astro.config.mjs` and JSON-LD in `src/layouts/Base.astro` (currently `z11travessia.vercel.app`, pending custom domain)
 
 ## Deploy
 

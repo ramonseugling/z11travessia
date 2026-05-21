@@ -12,7 +12,7 @@ export interface Expedition {
   includedExtras?: string[];
 }
 
-export const WHATSAPP_BASE = 'https://wa.me/5548900000000';
+export const WHATSAPP_BASE = 'https://wa.me/5548991876746';
 
 export const expeditions: Expedition[] = [
   {
@@ -29,7 +29,7 @@ export const expeditions: Expedition[] = [
       { label: 'Valor', value: 'R$ 300 / pessoa', highlight: true },
     ],
     included: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
-    whatsappMsg: 'Olá! Gostaria de consultar datas para Moleques do Sul.',
+    whatsappMsg: 'Olá! Gostaria de consultar datas para Expedição Moleques do Sul.',
     ctaLabel: 'Consultar próximas datas',
   },
   {
@@ -46,7 +46,7 @@ export const expeditions: Expedition[] = [
       { label: 'Valor', value: 'R$ 280 / pessoa', highlight: true },
     ],
     included: ['Frutas', 'Água', 'Café', 'Máscaras de mergulho', 'Boias', 'Binóculo para observação de vida selvagem'],
-    whatsappMsg: 'Olá! Gostaria de consultar datas para Mares do Sul.',
+    whatsappMsg: 'Olá! Gostaria de consultar datas para Expedição Mares do Sul.',
     ctaLabel: 'Consultar próximas datas',
   },
   {
@@ -63,7 +63,7 @@ export const expeditions: Expedition[] = [
       'Saídas de surf em grupo',
       'Celebrações e eventos privados',
     ],
-    whatsappMsg: 'Olá! Gostaria de planejar uma expedição privada.',
+    whatsappMsg: 'Olá! Gostaria de planejar uma Expedição privada.',
     ctaLabel: 'Planejar minha expedição',
   },
 ];
